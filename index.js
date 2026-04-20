@@ -25,7 +25,7 @@ if sunucuYasi > 18 {
   console.log(true);
 } else {
   console.log(false);
-}
+};
 
 /*
 Görev 1b - Değerler (puanlamaya dahil değildir)
@@ -104,7 +104,20 @@ OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı ye
 */
 
 function oyun(oyuncu, bilgisayar) {
-  /*buraya kodunu yazabilirsin*/
+  // 1. Durum: Beraberlik
+  if (oyuncu === bilgisayar) {
+    return "Beraberlik";
+  }
+  // 2. Durum: Oyuncunun Kazanma Senaryoları
+  if (
+    (oyuncu === "Taş" && bilgisayar === "Makas") ||
+    (oyuncu === "Kağıt" && bilgisayar === "Taş") ||
+    (oyuncu === "Makas" && bilgisayar === "Kağıt")
+  ) {
+    return "Kazandın!";
+  }
+  // 3. Durum: Geri kalan her şey (Kaybetme)
+  return "Kaybettin!";
 }
 
 // Şimdi Taş, Kağıt, Makas oyununu bilgisayara karşı oynayalım!
@@ -122,6 +135,30 @@ function oyun(oyuncu, bilgisayar) {
 Şimdi kendi seçtiğin bir seçime karşı bilgisayarın rastgele oluşturduğu seçimi yukarıda yazdığın oyun fonsiyonu ile oynayın ve sonucu console'a yazdırın.
 Örn: console.log(oyun("Makas",bilgisayarinSecimi()))
 */
+
+// 1. Bilgisayarın seçimini rastgele oluşturan fonksiyon
+function bilgisayarinSecimi() {
+  // 2. Rastgele değeri bir değişkende tutuyoruz
+  let rastgeleSayi = Math.random();
+  let secim;
+
+  // 3 & 4. Rastgele değeri "Taş", "Kağıt", "Makas" metinlerine dönüştürüyoruz
+  if (rastgeleSayi < 0.34) {
+    secim = "Taş";
+  } else if (rastgeleSayi <= 0.67) {
+    secim = "Kağıt";
+  } else {
+    secim = "Makas";
+  }
+
+  // 5. Oluşan değeri geri dönüyoruz
+  return secim;
+}
+
+// OYUNU BAŞLATALIM: 
+// Kendi seçimimizi ("Makas") ve bilgisayarın rastgele seçimini oyun fonksiyonuna gönderiyoruz.
+console.log(oyun("Makas", bilgisayarinSecimi()));
+
 
 /* Görev 4 : Metrik Dönüştürücü */
 
