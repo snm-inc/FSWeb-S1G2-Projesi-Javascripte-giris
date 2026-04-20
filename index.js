@@ -20,12 +20,13 @@ Aşağıdakileri yap:
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
 
-let sunucuYasi = 25
-if sunucuYasi > 18 {
+let surucuYasi = 25; // Değişken ismini 'surucuYasi' olarak düzelttik
+
+if (surucuYasi > 18) { // Şartı parantez içine aldık
   console.log(true);
 } else {
   console.log(false);
-};
+}
 
 /*
 Görev 1b - Değerler (puanlamaya dahil değildir)
