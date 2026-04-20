@@ -57,6 +57,10 @@ Aşağıdakileri yap:
    İPUCU: Number metoduna bakabilirsin
 */
 
+let sayi = "1999"
+let sayiInt = Number(sayi);
+console.log(sayiInt);
+
 /*
 Görev 1d - Çarpma
  
