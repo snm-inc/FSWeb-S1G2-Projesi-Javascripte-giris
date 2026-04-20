@@ -39,6 +39,13 @@ Aşağıdakileri yap:
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
 
+let birinciDeger = 10
+let ikinciDeger = 15
+if (birinciDeger < ikinciDeger) {
+  birinciDeger = 50;
+}
+console.log(birinciDeger)
+
 /*
 Görev 1c - String bir değeri Number'a dönüştürün (puanlamaya dahil değildir)
 
