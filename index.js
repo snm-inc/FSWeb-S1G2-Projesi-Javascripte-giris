@@ -272,9 +272,29 @@ Aşağıdakileri sesliHarfSayaci fonskiyonunda yap.
 İPUCU - .includes() methoduna bakabilirsin. (https://www.w3schools.com/jsref/jsref_includes.asp)
 */
 
-function sesliHarfSayaci(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function sesliHarfSayaci(kelime) {
+  // 1. Sesli harfleri içeren bir referans metni oluşturuyoruz
+  const sesliHarfler = "aeıioöuü";
+  let sayac = 0;
+
+  // 2. Kelimeyi küçük harfe çeviriyoruz ki büyük harfleri de sayabilelim
+  const kucukKelime = kelime.toLowerCase();
+
+  // 3. For döngüsü ile kelimenin her harfini geziyoruz
+  for (let i = 0; i < kucukKelime.length; i++) {
+    // 4. Eğer o anki harf sesli harfler listemizde varsa sayacı artırıyoruz
+    if (sesliHarfler.includes(kucukKelime[i])) {
+      sayac++;
+    }
+  }
+
+  // 5. Toplam sonucu geri dönüyoruz
+  return sayac;
 }
+
+console.log(sesliHarfSayaci("Merhaba Dünya")); 
+
+
 
 /* Lütfen bu satırın alt tarafını değiştirmeyin */
 function sa() {
