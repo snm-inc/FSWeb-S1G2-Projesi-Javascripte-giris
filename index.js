@@ -205,8 +205,20 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yap:
 4. Bu döngüde, her seferinde cocukSarkisi fonsiyonu çalışsın ve console.log'a dönen metni yazdırsın.
 */
 
-function cocukSarkisi(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+// 1. Fonksiyonu tanımlıyoruz (Sadece metni oluşturup döner)
+const cocukSarkisi = (sayi) => {
+  return `${sayi} küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!`;
+};
+
+// 2. Döngü Kısmı (Fonksiyonun dışında)
+let maymunSayisi = 5; // Başlangıç sayısı (istediğin değeri verebilirsin)
+
+while (maymunSayisi >= 1) {
+  // Her adımda fonksiyonu o anki sayıyla çalıştırıp konsola yazdırıyoruz
+  console.log(cocukSarkisi(maymunSayisi));
+  
+  // 3. Maymun sayısını 1 azaltıyoruz (Döngünün bitmesi için kritik!)
+  maymunSayisi--;
 }
 
 /* Görev 6 : Not Hesaplayıcı */
